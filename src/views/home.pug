@@ -3,17 +3,67 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Noom
+        title TALK
         link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+        style.
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 850px;
+                background-color: #fff;
+            }
+            input {
+                width: 80%;
+                margin: 8px;
+            }
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 15%;
+                height: 32px;
+                background-color: #f9ca24;
+                border: none;
+            }
+            div {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                width: 850px;
+                height: 60vh;
+                background-color: #f6e58d;
+            }
+            ul {
+                width: 850px;
+                list-style-type: none;
+                padding: 0;
+            }
+            li {
+                width: 300px;
+                max-width: 300px;
+                overflow-wrap: break-word;
+                border-radius: 10px;
+                margin-bottom: 12px;
+                background-color: #c7ecee;
+            }
     body 
         header 
-            h1 Noom 
+            h1 TALK 
         main 
             form#nickname
-                input(type="text", placeholder="choose a nickname", required)
-                button save
-            ul
-            form#message
-                input(type="text", placeholder="write a message", required)
-                button send 
+                input(type="text", placeholder="닉네임을 설정해보세요!", required)
+                button 설정
+            div
+                ul
+                form#message
+                    input(type="text", placeholder="메시지를 작성해보세요!", required)
+                    button 전송 
         script(src="/public/js/app.js")
